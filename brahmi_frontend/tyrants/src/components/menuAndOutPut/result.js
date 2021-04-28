@@ -37,6 +37,7 @@ class Result extends Component {
         LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
     }
 
+    // trnslate the words in native language
     translateWords = async (language) => {
         this.setState({isLoading: true});
         try {
@@ -124,7 +125,7 @@ class Result extends Component {
                                 style={[
                                     {
                                         justifyContent: "space-evenly",
-                                        marginVertical: 10,                                   
+                                        marginVertical: 10,
                                         color: "#FFC542",
                                         width: 140,
                                         marginTop: 18,
@@ -136,13 +137,13 @@ class Result extends Component {
                                     dropdownPosition= "0"
                                     label="Select language"
                                     data={data}
-                                    baseColor= "rgba(255, 255, 255, 1)"                         
-                                    style={{                                                                            
+                                    baseColor= "rgba(255, 255, 255, 1)"
+                                    style={{
                                         fontWeight: "bold",
                                         fontFamily: "SF Pro Rounded",
-                                        fontSize: 16,                          
+                                        fontSize: 16,
                                         color: '#FFC542',
-                                        marginTop: 2                                
+                                        marginTop: 2
                                     }}
 
                                     onChangeText={(value) => {
@@ -155,7 +156,7 @@ class Result extends Component {
                             (
                                 <ScrollView showsVerticalScrollIndicator={false} style={{padding:20}}>
 
-                                    <View>
+                                    <View style={{marginBottom: hp('18%')}}>
                                         {this.state.findWord.map((w, index) => (
                                             <View key={index}>
                                                 <Collapse style={{backgroundColor: 'rgba(186, 186, 186, 0.08)',marginTop: 10,padding:wp("5%"), borderRadius: 15}}>

@@ -1,4 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
+// home screen
 import React, {Component} from 'react';
 import {
   View,
@@ -28,13 +29,8 @@ class Home extends Component {
           style={{
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: 8,
-          }}>
-          <ImageBackground
-            source={require('../../images/icons/homeImge1.png')}
-            style={styles.img}
-          />
-        </View>
+            marginTop: 40,
+          }}></View>
         <View style={styles.textContainer}>
           <Text style={styles.text}>Welcome to </Text>
           <View>
@@ -60,6 +56,7 @@ class Home extends Component {
         </View>
 
         <View style={[styles.centerItems]}>
+          {/* start button,  when click this button user navigate to camera screen */}
           <TouchableOpacity
             style={styles.button}
             onPress={() => this.props.navigation.push('Camera')}>
